@@ -5,7 +5,7 @@ class Header extends Component{
 	render(){
 		return(
 			<div className="header">
-				<p>Blue Hotel</p>
+				
 				<ul className="nav">
                     <li><a href="#home">HOME</a></li>
 					<li><a href="#about">ABOUT US</a></li> 
