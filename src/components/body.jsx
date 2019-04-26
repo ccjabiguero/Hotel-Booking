@@ -209,6 +209,7 @@ class Body extends Component{
 						<th>Middle Name</th>
 						<th>Last Name</th>
 						<th>Birth Date</th>
+						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
