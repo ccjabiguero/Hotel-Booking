@@ -37,6 +37,7 @@ public class GuestServiceImpl implements GuestService{
 	@Override
 	public void add(Guest guest) {
 		if (validate(guest)) {
+			System.out.println("add guest");
 			guestDao.add(guest);
 		} else {
 			throw new IllegalArgumentException("Fields firstName and lastName cannot be blank.");
@@ -61,6 +62,7 @@ public class GuestServiceImpl implements GuestService{
 	
 	@Override
 	public void delete(Long id) {
+		System.out.println("Guest ID "+ id +" deleted");
 		guestDao.delete(id);
 	}
 	
