@@ -137,7 +137,7 @@ class Body extends Component{
 				</FormGroup>
 				<FormGroup>
 					<Label for="birthDate">BirthDate</Label>
-					<Input id="birthDate" value={this.state.newGuestData.birthDate} onChange={(e) => {
+					<Input type="date" id="birthDate" value={this.state.newGuestData.birthDate} onChange={(e) => {
 					let { newGuestData } = this.state;
 
 					newGuestData.birthDate = e.target.value;
@@ -187,7 +187,7 @@ class Body extends Component{
 				</FormGroup>
 				<FormGroup>
 					<Label for="birthDate">birthDate</Label>
-					<Input id="birthDate" value={this.state.editGuestData.birthDate} onChange={(e) => {
+					<Input type="date" id="birthDate" value={this.state.editGuestData.birthDate} onChange={(e) => {
 					let { editGuestData } = this.state;
 
 					editGuestData.birthDate = e.target.value;

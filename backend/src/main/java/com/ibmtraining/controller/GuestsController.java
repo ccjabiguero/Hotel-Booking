@@ -1,6 +1,7 @@
 package com.ibmtraining.controller;
 
 import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -41,7 +42,6 @@ public class GuestsController {
 
 		try {
 			List<Guest> guests;
-			
 			if (StringUtils.isAllBlank(firstName,middleName, lastName, birthDate)) {
 				guests = guestService.findAll();
 			} else {
