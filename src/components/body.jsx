@@ -116,7 +116,7 @@ class Body extends Component{
 					}} />
 				</FormGroup>
 				<FormGroup>
-					<Label for="middleName">Middle Name</Label>
+					<Label for="middleName">Middle Name (Optional)</Label>
 					<Input id="middleName" value={this.state.newGuestData.middleName} onChange={(e) => {
 					let { newGuestData } = this.state;
 
@@ -166,7 +166,7 @@ class Body extends Component{
 					}} />
 				</FormGroup>
 				<FormGroup>
-					<Label for="middleName">Middle Name</Label>
+					<Label for="middleName">Middle Name (Optional)</Label>
 					<Input id="middleName" value={this.state.editGuestData.middleName} onChange={(e) => {
 					let { editGuestData } = this.state;
 
