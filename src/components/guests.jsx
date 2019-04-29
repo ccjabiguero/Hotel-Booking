@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import '../css/body.css';
 import axios from 'axios';
 import {Table, Button, Modal, ModalHeader, ModalBody, ModalFooter, Label, Input, FormGroup} from 'reactstrap';
 
-class Body extends Component{
+class Guests extends Component{
 	
 	state = { 
 		guests: [],
@@ -220,4 +219,4 @@ class Body extends Component{
 		);
 	}
 }
-export default Body;
+export default Guests;
