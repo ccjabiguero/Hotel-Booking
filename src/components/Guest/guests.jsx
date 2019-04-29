@@ -80,7 +80,7 @@ class Guests extends Component{
 		})
 	});
 	}
-	render(){
+	render(){ 
 		let guests = this.state.guests.map((guest)=>{
 			return(
 				<tr key={guest.id}>
@@ -98,7 +98,8 @@ class Guests extends Component{
 		});
 	
 		return(	
-		<div className="App container"><h2>Guest List</h2>
+		<div className="App container"><h2>Guest List</h2> 
+		
 		<Button color="primary" onClick={this.toggleNewGuestModal.bind(this)} className="my-3">Add Guest</Button>
 		<Modal isOpen={this.state.newGuestModal} toggle={this.toggleNewGuestModal.bind(this)}>
 			<ModalHeader toggle={this.toggleNewGuestModal.bind(this)}>Add a new guest</ModalHeader>
@@ -215,6 +216,7 @@ class Guests extends Component{
 				</tbody>
 			</Table>
 			</div>
+			
 		);
 	}
 }
