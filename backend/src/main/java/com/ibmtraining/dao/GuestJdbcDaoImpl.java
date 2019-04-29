@@ -76,7 +76,7 @@ public class GuestJdbcDaoImpl implements GuestDao {
 	@Override
 	public List<Guest> findAll() {
 
-		return findByName(null, null, null, null);
+		return findByName(null, null);
 	}
 
 	@Override
@@ -109,7 +109,7 @@ public class GuestJdbcDaoImpl implements GuestDao {
 	}
 
 	@Override
-	public List<Guest> findByName(String firstName, String middleName, String lastName, String birthDate) {
+	public List<Guest> findByName(String firstName,  String lastName) {
 		List<Guest> guests = new ArrayList<>();
 
 		String sql = "SELECT id, firstname, middlename, lastname, birthdate FROM GUESTS WHERE firstname LIKE ? AND lastname LIKE ?";

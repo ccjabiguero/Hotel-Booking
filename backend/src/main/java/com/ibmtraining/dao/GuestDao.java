@@ -9,7 +9,7 @@ public interface GuestDao {
 	
 	public Guest find(Long id);
 	
-	public List<Guest> findByName(String firstName, String middleName, String lastName, String birthDate);
+	public List<Guest> findByName(String firstName, String lastName);
 	
 	public void add(Guest guest);
 	

@@ -35,17 +35,17 @@ public class GuestsController {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Guest> getGuests(
-			@QueryParam("firstname") String firstName,
-			@QueryParam("middlename") String middleName,
-			@QueryParam("lastname") String lastName,
-			@QueryParam("birthdate") String birthDate) {
+			@QueryParam("firstName") String firstName,
+			@QueryParam("middleName") String middleName,
+			@QueryParam("lastName") String lastName,
+			@QueryParam("birthDate") String birthDate) {
 
 		try {
 			List<Guest> guests;
 			if (StringUtils.isAllBlank(firstName,middleName, lastName, birthDate)) {
 				guests = guestService.findAll();
 			} else {
-				guests = guestService.findByName(firstName, middleName, lastName, birthDate);
+				guests = guestService.findByName(firstName, lastName);
 			}
 						
 			return guests;

@@ -30,8 +30,8 @@ public class GuestServiceImpl implements GuestService{
 	}
 
 	@Override
-	public List<Guest> findByName(String firstName, String middleName, String lastName, String birthDate) {
-		return guestDao.findByName(firstName, middleName, lastName, birthDate);
+	public List<Guest> findByName(String firstName, String lastName) {
+		return guestDao.findByName(firstName, lastName);
 	}
 
 	@Override
