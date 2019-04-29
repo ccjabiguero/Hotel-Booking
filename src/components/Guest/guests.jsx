@@ -90,8 +90,8 @@ class Guests extends Component{
 						<td>{guest.lastName}</td>
 						<td>{guest.birthDate}</td>
 						<td>
-							<Button color = "success" size="sm"className="mr-2" onClick={this.editGuest.bind(this, guest.id, guest.firstName, guest.middleName, guest.lastName, guest.birthDate)}>Edit</Button>
-							<Button color = "danger" size="sm" onClick={this.deleteGuest.bind(this, guest.id)}>Delete</Button>
+							<Button color = "success" size="md"className="mr-2" onClick={this.editGuest.bind(this, guest.id, guest.firstName, guest.middleName, guest.lastName, guest.birthDate)}>Edit</Button>
+							<Button color = "danger" size="md" onClick={this.deleteGuest.bind(this, guest.id)}>Delete</Button>
 						</td>
 				</tr>
 			)

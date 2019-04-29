@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem } from 'reactstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import '../index.css'
 import Home from './home.jsx';
 import Guests from './Guest/guests.jsx';
 import Rooms from './Room/rooms.jsx';
@@ -24,15 +25,15 @@ class App extends Component {
     return (
         <Router>
         <div>
-        <Navbar color="light" light expand="md">
+        <Navbar className="header" light expand="md">
           <NavbarBrand href="/">Hotel Booking System</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
-                    <NavItem><li><Link to={'/'} className="nav-link"> Home </Link></li></NavItem>
-                    <NavItem><li><Link to={'/bookings'} className="nav-link">Bookings</Link></li></NavItem>
-                    <NavItem><li><Link to={'/guests'} className="nav-link">Guests</Link></li></NavItem>
-                    <NavItem><li><Link to={'/rooms'} className="nav-link">Rooms</Link></li></NavItem>
+                    <NavItem><Link to={'/'} className="nav-link"> Home </Link></NavItem>
+                    <NavItem><Link to={'/bookings'} className="nav-link">Bookings</Link></NavItem>
+                    <NavItem><Link to={'/guests'} className="nav-link">Guests</Link></NavItem>
+                    <NavItem><Link to={'/rooms'} className="nav-link">Rooms</Link></NavItem>
                 </Nav>
             </Collapse>
         </Navbar>

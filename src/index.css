@@ -2,3 +2,11 @@
 body {
     font-family: 'Questrial', sans-serif;
 }
+
+.header {
+    padding: 30px;
+    text-align: center;
+    background: #66D3FA;
+    color: white;
+    font-size: 20px;
+}

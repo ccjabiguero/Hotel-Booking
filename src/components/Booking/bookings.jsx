@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Table, Button, Modal, ModalHeader, ModalBody, ModalFooter, Label, Input, FormGroup} from 'reactstrap';
+import {Table} from 'reactstrap';
 
 class Bookings extends Component {
   render() {
@@ -15,6 +15,7 @@ class Bookings extends Component {
 						<th>Check-in Date</th>
 						<th>Check-out Date</th>
 						<th>Total Price</th>
+						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>

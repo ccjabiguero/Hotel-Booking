@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Table, Button, Modal, ModalHeader, ModalBody, ModalFooter, Label, Input, FormGroup} from 'reactstrap';
+import {Table} from 'reactstrap';
 
 class Rooms extends Component {
   render() {
@@ -12,6 +12,7 @@ class Rooms extends Component {
 						<th>Room ID</th>
 						<th>Room Type</th>
 						<th>Price per Night</th>
+						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
