@@ -4,7 +4,7 @@ import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div className="App container">
       <Row>
       <Col sm="6">
         <Card body>

@@ -67,10 +67,10 @@ public class GuestJdbcDaoImpl implements GuestDao {
 
 	private void insertInitGuests() {
 
-		add(new Guest("Catherine","Cobarrubias", "Jabiguero", "10/30/1997"));
-		add(new Guest("Karl Neumann","Barnes", "Magno", "07/28/1998"));
-		add(new Guest("Jamir","Cobarrubias", "Jabiguero", "12/21/2008"));
-		add(new Guest("Franzine","Cobarrubias", "Jabiguero", "05/04/2005"));
+		add(new Guest("Catherine","Cobarrubias", "Jabiguero", "1997-10-30"));
+		add(new Guest("Karl Neumann","Barnes", "Magno", "1998-07-28"));
+		add(new Guest("Jamir","Cobarrubias", "Jabiguero", "2008-12-21"));
+		add(new Guest("Franzine","Cobarrubias", "Jabiguero", "2005-05-04"));
 	}
 
 	@Override
