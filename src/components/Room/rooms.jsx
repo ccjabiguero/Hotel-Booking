@@ -6,9 +6,9 @@ class Rooms extends Component {
 		rooms: []
 	}
 	componentWillMount(){
-		this._refreshGuests();
+		this._refreshRooms();
 	}
-	_refreshGuests() {
+	_refreshRooms() {
 	axios.get("http://localhost:8080/HotelBooking/rest/rooms").then((response) => {
 		this.setState({
 		rooms: response.data

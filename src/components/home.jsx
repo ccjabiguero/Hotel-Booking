@@ -45,15 +45,6 @@ class Home extends Component {
       </Col>
     </Row>
     </div>
-      // <div className="my-app">
-      //  <h1>Homepage</h1><hr/>
-      //  <h2>Book a room</h2>
-      //  <h2>Guests</h2><p>expected for today</p>
-      //  <h2>Latest bookings</h2>
-      //  <h2>Confirmed bookings</h2>
-      //  <h2>Room Availability</h2>
-      //  <h2></h2>
-      // </div>
     );
   }
 }
