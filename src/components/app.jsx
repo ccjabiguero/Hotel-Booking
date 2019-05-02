@@ -21,6 +21,7 @@ class App extends Component {
       isOpen: !this.state.isOpen
     });
   }
+  // render the component based on current or selected mode
   render() {
     return (
         <Router>
