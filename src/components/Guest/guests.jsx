@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import GuestTable from './table_guest.jsx'
-import CreateGuest from './create_guest.jsx'
+import AddGuest from './add_guest.jsx'
 import GuestRow from './row_guest.jsx'
-
+import SearchGuest from './search_guest.jsx'
 class Guests extends Component{
 	// component that contains all the logic and other smaller components
 	// that form the Read Guests view
@@ -37,7 +37,8 @@ class Guests extends Component{
 		return(	
 		<div className="App container">
 			<h2>Guest List</h2> 
-			<CreateGuest guests={this._refreshGuests()}/>
+			<SearchGuest />
+			<AddGuest guests={this._refreshGuests()}/>
 			<GuestTable guests={guests}/>
 		</div>
 		);

@@ -1,7 +1,7 @@
 package com.ibmtraining.dao;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -51,7 +51,7 @@ public class RoomJdbcDaoImpl implements RoomDao {
 	private void createRoomTable() {
 		String createSql = "CREATE TABLE ROOMS " + "(id INTEGER IDENTITY PRIMARY KEY, " 
 												 + " roomtype VARCHAR(255), "
-												 + " price DECIMAL(13,0))";
+												 + " price DECIMAL(14,2))";
 
 		try (Connection conn = dataSource.getConnection(); Statement stmt = conn.createStatement()) {
 
@@ -65,10 +65,16 @@ public class RoomJdbcDaoImpl implements RoomDao {
 
 	private void insertInitRooms() {
 
-		add(new Room("Single",null));
-		add(new Room("Double",null));
-		add(new Room("King",null));
-		add(new Room("Queen",null));
+		BigDecimal juniorPrice = new BigDecimal("1500.00");
+		BigDecimal royalPrice = new BigDecimal("2100.00");
+		BigDecimal familyPrice = new BigDecimal("2500.00");
+		BigDecimal plazaPrice = new BigDecimal("3000.00");
+		BigDecimal presidentialPrice = new BigDecimal("5000.00");
+		add(new Room("Junior Suite",juniorPrice));
+		add(new Room("Royal Suite",royalPrice));
+		add(new Room("Family Suite",familyPrice));
+		add(new Room("Plaza Suite",plazaPrice));
+		add(new Room("Presidential Suite",presidentialPrice));
 	}
 
 	@Override
@@ -148,7 +154,6 @@ public class RoomJdbcDaoImpl implements RoomDao {
 	public void add(Room room) {
 		
 		String insertSql = "INSERT INTO ROOMS (roomtype, price) VALUES (?, ?)";
-
 		try (Connection conn = dataSource.getConnection(); PreparedStatement ps = conn.prepareStatement(insertSql)) {
 
 			ps.setString(1, room.getRoomType());

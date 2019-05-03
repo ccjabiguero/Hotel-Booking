@@ -1,8 +1,6 @@
 package com.ibmtraining.controller;
 
 import java.math.BigDecimal;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 import javax.ws.rs.Consumes;

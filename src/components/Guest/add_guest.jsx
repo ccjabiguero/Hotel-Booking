@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import {Button, Modal, ModalHeader, ModalBody, ModalFooter, Label, Input, FormGroup} from 'reactstrap';
 
-class Guests extends Component{
+class AddGuest extends Component{
 	
 	state = {
 		newGuestData: {
@@ -99,4 +99,4 @@ class Guests extends Component{
 		);
 	}
 }
-export default Guests;
+export default AddGuest;

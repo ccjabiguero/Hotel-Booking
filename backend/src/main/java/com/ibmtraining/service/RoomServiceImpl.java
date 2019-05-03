@@ -1,8 +1,6 @@
 package com.ibmtraining.service;
-import java.sql.Date;
+import java.math.BigDecimal;
 import java.util.List;
-
-import javax.ws.rs.PathParam;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -36,6 +34,7 @@ public class RoomServiceImpl implements RoomService{
 	@Override
 	public void add(Room room) {
 		if (validate(room)) {
+			System.out.println("Room added");
 			roomDao.add(room);
 		} else {
 			throw new IllegalArgumentException("Fields roomType and price cannot be blank.");
@@ -43,12 +42,14 @@ public class RoomServiceImpl implements RoomService{
 	}
 
 	@Override
-	public void upsert(Room room) {
+	public void upsert(Room room ) {
 		if (validate(room)) {
 			if(room.getId() != null && room.getId() >= 0) {
+				System.out.println("Room update");
 				roomDao.update(room);
 			} else {
-				roomDao.add(room);
+				System.out.println("Room added");
+				roomDao.add( room);
 			}
 		} else {
 			throw new IllegalArgumentException("Fields roomType and price cannot be blank.");
@@ -61,7 +62,7 @@ public class RoomServiceImpl implements RoomService{
 	}
 	
 	private boolean validate(Room room) {
-		return !StringUtils.isAnyBlank(room.getRoomType()) && room.getPrice() == null;
+		return !StringUtils.isAnyBlank(room.getRoomType())  ;
 	}
 
 }

@@ -4,6 +4,7 @@ import EditAndDeleteGuest from  './edit_and_delete_guest.jsx'
 class GuestRow extends Component{
 	// component that renders a single guest
 	// see ./guests.jsx
+	//guestId is for delete
 	render(){
 		return(	
 			<tr key={this.props.guest.id}>

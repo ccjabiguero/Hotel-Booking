@@ -1,5 +1,4 @@
 package com.ibmtraining.dao;
-import java.sql.Date;
 import java.util.List;
 import com.ibmtraining.domain.Room;
 
