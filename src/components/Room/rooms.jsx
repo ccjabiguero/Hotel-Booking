@@ -14,6 +14,7 @@ class Rooms extends Component{
 		}
 	
 	}
+	
 	// on mount, call the _refreshRooms() method
 	//which fetch all rooms and stored them as this component's state
 	componentWillMount(){

@@ -1,21 +1,31 @@
-import React from 'react';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import React, { Component } from 'react'
+import { Dropdown } from 'semantic-ui-react'
+import {Button} from 'reactstrap'
+import { MDBIcon, MDBFormInline, MDBBtn } from "mdbreact";
 
-export default class SearchGuest extends React.Component {
+import Select from 'react-select';
+const options = [
+  { label: 'First Name',  value: 'First Name' },
+  { label: 'Last Name', value: 'Last Name' }
+  
+]
+
+class SearchGuest extends Component {
   render() {
+
     return (
-        <p>Search by First Name
-        {/* <div className="searchForm">
-        <form>
-          <input
-            placeholder="Search for..."
-            value={this.state.query}
-            onChange={this.handleInputChange}
-          />
-        </form>
-        <div>{this.state.filteredData.map(i => <p>{i.name}</p>)}</div>
-      </div> */}
-      </p>
-    );
+    <div className="row">
+      <div className="col-md-9"></div>
+      <div className="col-md-2">
+        <Select  placeholder="Choose by..."options={ options } isSearchable={false}/>
+        <div class="input-container">
+        <i class="material-icons">search</i>
+        <input className="form-control " type="text" placeholder="Search" />
+        </div>
+      </div>
+    </div>
+    )
   }
 }
+// <Button color="primary" >Search</Button>
+export default SearchGuest

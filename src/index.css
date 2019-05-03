@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500|Questrial');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 body {
     font-family: 'Questrial', sans-serif;
 }
@@ -44,4 +45,14 @@ form.example::after {
     content: "";
     clear: both;
     display: table;
+}
+
+.input-icons i {
+    position: absolute;
+    vertical-align: middle;
+}
+
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
 }
