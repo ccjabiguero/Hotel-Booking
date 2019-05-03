@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import EditAndDeleteGuest from  './edit_and_delete_guest.jsx'
+import EditAndDeleteGuest from  './EditAndDeleteGuest.jsx'
 
 class GuestRow extends Component{
 	// component that renders a single guest

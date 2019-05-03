@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import {Table, Alert} from 'reactstrap';
-class GuestTable extends Component{
+import SearchGuest from './SearchGuest.jsx'
+class TableGuest extends Component{
 	//placing the data to guests table
 	// this.props.guests came from guest.jsx
 	render(){
-		return(	
+		return(
 			!this.props.guests.length
 			? <Alert color="info"> No guests found </Alert>:
 			<Table>
@@ -25,4 +26,4 @@ class GuestTable extends Component{
 		);
 	}
 }
-export default GuestTable;
+export default TableGuest;

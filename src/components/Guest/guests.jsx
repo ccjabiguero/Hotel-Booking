@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import GuestTable from './table_guest.jsx'
-import AddGuest from './add_guest.jsx'
-import GuestRow from './row_guest.jsx'
-import SearchGuest from './search_guest.jsx'
+import TableGuest from './TableGuest.jsx'
+import AddGuest from './AddGuest.jsx'
+import RowGuest from './RowGuest.jsx'
+import SearchGuest from './SearchGuest.jsx'
 class Guests extends Component{
 	// component that contains all the logic and other smaller components
 	// that form the Read Guests view
@@ -30,7 +30,7 @@ class Guests extends Component{
 		// component for the whole guests table
 		let guests = this.state.guests.map((guest)=>{
 			return(
-				<GuestRow guest={guest} guests={guests}/>
+				<RowGuest guest={guest} />
 			)
 		}); 
 		// render component on the page
@@ -39,7 +39,7 @@ class Guests extends Component{
 			<h2>Guest List</h2> 
 			<SearchGuest />
 			<AddGuest guests={this._refreshGuests()}/>
-			<GuestTable guests={guests}/>
+			<TableGuest guests={guests}/>
 		</div>
 		);
 	}

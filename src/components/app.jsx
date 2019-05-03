@@ -3,7 +3,7 @@ import { Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem } from 'reactstra
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import '../index.css'
 import Home from './home.jsx';
-import Guests from './Guest/guests.jsx';
+import Guests from './Guest/Guests.jsx';
 import Rooms from './Room/rooms.jsx';
 import Bookings from './Booking/bookings.jsx';
 import Notfound from './notfound.jsx'
