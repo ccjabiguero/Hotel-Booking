@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import '../index.css'
 import Home from './home.jsx';
 import Guests from './Guest/Guests.jsx';
-import Rooms from './Room/rooms.jsx';
+import Rooms from './Room/Rooms.jsx';
 import Bookings from './Booking/bookings.jsx';
 import Notfound from './notfound.jsx'
 
@@ -32,9 +32,9 @@ class App extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                     <NavItem><Link to={'/'} className="nav-link"> Home </Link></NavItem>
-                    <NavItem><Link to={'/bookings'} className="nav-link">Bookings</Link></NavItem>
-                    <NavItem><Link to={'/guests'} className="nav-link">Guests</Link></NavItem>
-                    <NavItem><Link to={'/rooms'} className="nav-link">Rooms</Link></NavItem>
+                    <NavItem><Link to={'/Bookings'} className="nav-link">Bookings</Link></NavItem>
+                    <NavItem><Link to={'/Guests'} className="nav-link">Guests</Link></NavItem>
+                    <NavItem><Link to={'/Rooms'} className="nav-link">Rooms</Link></NavItem>
                 </Nav>
             </Collapse>
         </Navbar>
@@ -43,9 +43,9 @@ class App extends Component {
         <hr />
         <Switch>
             <Route exact path='/' component={Home} />
-            <Route path='/bookings' component={Bookings} />
-            <Route path='/rooms' component={Rooms} />
-            <Route path='/guests' component={Guests} />
+            <Route path='/Bookings' component={Bookings} />
+            <Route path='/Rooms' component={Rooms} />
+            <Route path='/Guests' component={Guests} />
             <Route component={Notfound} />
         </Switch>
       </Router>

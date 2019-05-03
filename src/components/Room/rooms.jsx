@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import RoomTable from './table_room.jsx'
-import AddRoom from './add_room.jsx'
-import RoomRow from './row_room.jsx'
+import TableRoom from './TableRoom.jsx'
+import AddRoom from './AddRoom.jsx'
+import RowRoom from './RowRoom.jsx'
 //import SearchRoom from './search_room.jsx'
 class Rooms extends Component{
 	// component that contains all the logic and other smaller components
@@ -30,7 +30,7 @@ class Rooms extends Component{
 		// component for the whole rooms table
 		let rooms = this.state.rooms.map((room)=>{
 			return(
-				<RoomRow room={room} rooms={rooms}/>
+				<RowRoom room={room} rooms={rooms}/>
 			)
 		}); 
 		// render component on the page
@@ -38,7 +38,7 @@ class Rooms extends Component{
 		<div className="App container">
 			<h2>Room List</h2> 
 			<AddRoom rooms={this._refreshRooms()}/>
-			<RoomTable rooms={rooms}/>
+			<TableRoom rooms={rooms}/>
 		</div>
 		);
 	}

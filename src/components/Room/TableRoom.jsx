@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Table, Alert} from 'reactstrap';
-class RoomTable extends Component{
+class TableRoom extends Component{
 	//placing the data to rooms table
 	// this.props.rooms came from guest.jsx
 	render(){
@@ -23,4 +23,4 @@ class RoomTable extends Component{
 		);
 	}
 }
-export default RoomTable;
+export default TableRoom;

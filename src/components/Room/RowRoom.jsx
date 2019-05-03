@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import EditAndDeleteRoom from  './edit_and_delete_room.jsx'
+import EditAndDeleteRoom from  './EditAndDeleteRoom.jsx'
 
 class RoomRow extends Component{
 	// component that renders a single room
