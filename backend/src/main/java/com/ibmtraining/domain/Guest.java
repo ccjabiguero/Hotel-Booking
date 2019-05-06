@@ -8,17 +8,17 @@ public class Guest {
 	private String firstName;
 	private String middleName;
 	private String lastName;
-	private String birthDate;
+	private Date birthDate;
 	
 	public Guest() {
 		
 	}
 	
-	public Guest(String firstName, String middleName, String lastName, String birthDate) {
+	public Guest(String firstName, String middleName, String lastName, Date birthDate) {
 		this(null, firstName,middleName, lastName,birthDate);
 	}
 
-	public Guest(Long id, String firstName, String middleName, String lastName, String birthDate) {
+	public Guest(Long id, String firstName, String middleName, String lastName, Date birthDate) {
 		this.id = id;
 		this.firstName = firstName;
 		this.middleName = middleName;
@@ -57,11 +57,11 @@ public class Guest {
 		this.middleName = middleName;
 	}
 
-	public String getBirthDate() {
+	public Date getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(String birthDate) {
+	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
 	}
 	

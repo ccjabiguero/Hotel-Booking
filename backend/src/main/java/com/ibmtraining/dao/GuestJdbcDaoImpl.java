@@ -66,11 +66,16 @@ public class GuestJdbcDaoImpl implements GuestDao {
 	}
 
 	private void insertInitGuests() {
-
-		add(new Guest("Catherine","Cobarrubias", "Jabiguero", "1997-10-30"));
-		add(new Guest("Karl Neumann","Barnes", "Magno", "1998-07-28"));
-		add(new Guest("Jamir","Cobarrubias", "Jabiguero", "2008-12-21"));
-		add(new Guest("Franzine","Cobarrubias", "Jabiguero", "2005-05-04"));
+		Date d1, d2, d3, d4;
+		d1 = Date.valueOf("1997-10-30");
+		d2 = Date.valueOf( "1998-07-28");
+		d3 = Date.valueOf( "2008-12-21");
+		d4 = Date.valueOf("2005-05-04");
+		
+		add(new Guest("Catherine","Cobarrubias", "Jabiguero",d1 ));
+		add(new Guest("Karl Neumann","Barnes", "Magno",d2));
+		add(new Guest("Jamir","Cobarrubias", "Jabiguero",d3));
+		add(new Guest("Franzine","Cobarrubias", "Jabiguero",d4 ));
 	}
 
 	@Override
@@ -96,7 +101,7 @@ public class GuestJdbcDaoImpl implements GuestDao {
 													results.getString("firstname"),
 													results.getString("middlename"),
 													results.getString("lastname"),
-													results.getString("birthdate"));
+													results.getDate("birthdate"));
 				}
 
 			} catch (SQLException e) {
@@ -127,7 +132,7 @@ public class GuestJdbcDaoImpl implements GuestDao {
 						results.getString("firstname"),
 						results.getString("middlename"),
 						results.getString("lastname"),
-						results.getString("birthdate"));
+						results.getDate("birthdate"));
 				guests.add(guest);
 			}
 
@@ -162,7 +167,7 @@ public class GuestJdbcDaoImpl implements GuestDao {
 			ps.setString(1, guest.getFirstName());
 			ps.setString(2, guest.getMiddleName());
 			ps.setString(3, guest.getLastName());
-			ps.setString(4, guest.getBirthDate());
+			ps.setDate(4, guest.getBirthDate());
 			ps.executeUpdate();
 
 		} catch (SQLException e) {
@@ -180,7 +185,7 @@ public class GuestJdbcDaoImpl implements GuestDao {
 				ps.setString(1, guest.getFirstName());
 				ps.setString(2, guest.getMiddleName());
 				ps.setString(3, guest.getLastName());
-				ps.setString(4, guest.getBirthDate());
+				ps.setDate(4, guest.getBirthDate());
 				ps.setLong(5, guest.getId());
 				ps.executeUpdate();
 		} catch (SQLException e) {

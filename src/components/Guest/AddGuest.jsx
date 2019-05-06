@@ -32,7 +32,7 @@ class AddGuest extends Component{
 			this.setState({ guests, newGuestModal: false, newGuestData: {
 				firstName: '',
 				middleName: '',
-				laststName: '',
+				lastName: '',
 				birthDate: ''
 				}
 			}); 

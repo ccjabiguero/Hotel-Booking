@@ -29,7 +29,7 @@ class EditAndDeleteGuest extends Component{
 			firstName, middleName, lastName, birthDate
 		}).then((response) => {
 			console.log(response.data)
-	this.setState({
+			this.setState({
 			  editGuestModal: false, editGuestData: { id: '', firstName: '', middleName: '', lastName: '', birthDate: '' }
 			})
 			

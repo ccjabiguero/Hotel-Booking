@@ -12,7 +12,6 @@ class Guests extends Component{
 		this.state = { 
 			guests: []
 		}
-	
 	}
 	// on mount, call the _refreshGuests() method
 	//which fetch all guests and stored them as this component's state
@@ -23,6 +22,7 @@ class Guests extends Component{
 	axios.get("http://localhost:8080/HotelBooking/rest/guests").then((response) => {
 		this.setState({
 		guests: response.data
+
 		})
 	});
 	}
@@ -37,7 +37,7 @@ class Guests extends Component{
 		return(	
 		<div className="App container">
 			<h2>Guest List</h2> 
-			<SearchGuest />
+			<SearchGuest guests={guests}/>
 			<AddGuest guests={this._refreshGuests()}/>
 			<TableGuest guests={guests}/>
 		</div>

@@ -2,15 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Select from 'react-select';
 const options = [
-  { label: 'First Name',  value: 'First Name' },
-  { label: 'Last Name', value: 'Last Name' }
+  { label: 'CheckIn',  value: 'CheckIn' },
+  { label: 'CheckOut', value: 'CheckOut' }
 ]
-class SearchGuest extends Component {
-  searchGuest(name){
-    axios.get("http://localhost:8080/HotelBooking/rest/guests?firstName="+name).then((response)=>{
-    
-    });
-  }
+class SearchBooking extends Component {
+  
   render() {
     return (
     <div className="row">
@@ -20,7 +16,7 @@ class SearchGuest extends Component {
         <div className="input-container">
         <i className="material-icons">search</i>
         <input className="searchBox " type="search" placeholder="Search" />
-        <button className="searchButton" onClick={this.searchGuest.bind(this)}>Search</button>
+        <button className="searchButton" >Search</button>
         </div>
       </div>
     </div>
@@ -28,4 +24,4 @@ class SearchGuest extends Component {
   }
 }
 // 
-export default SearchGuest
+export default SearchBooking

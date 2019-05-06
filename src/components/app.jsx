@@ -5,7 +5,7 @@ import '../index.css'
 import Home from './home.jsx';
 import Guests from './Guest/Guests.jsx';
 import Rooms from './Room/Rooms.jsx';
-import Bookings from './Booking/bookings.jsx';
+import Bookings from './Booking/Bookings.jsx';
 import Notfound from './notfound.jsx'
 
 class App extends Component {

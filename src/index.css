@@ -65,3 +65,11 @@ form.example::after {
     padding: 0.5rem 0.5rem 0.5rem 0;
     flex: 1;
 }
+
+.searchButton {
+    background: #538AC5;
+    border: 0;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0;
+}
