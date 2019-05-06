@@ -7,7 +7,6 @@ import Select from 'react-select';
 const options = [
   { label: 'First Name',  value: 'First Name' },
   { label: 'Last Name', value: 'Last Name' }
-  
 ]
 
 class SearchGuest extends Component {
@@ -16,11 +15,11 @@ class SearchGuest extends Component {
     return (
     <div className="row">
       <div className="col-md-9"></div>
-      <div className="col-md-2">
+      <div className="col-md-2.5">
         <Select  placeholder="Choose by..."options={ options } isSearchable={false}/>
-        <div class="input-container">
-        <i class="material-icons">search</i>
-        <input className="form-control " type="text" placeholder="Search" />
+        <div className="input-container">
+        <i className="material-icons">search</i>
+        <input className="searchBox " type="search" placeholder="Search" />
         </div>
       </div>
     </div>
